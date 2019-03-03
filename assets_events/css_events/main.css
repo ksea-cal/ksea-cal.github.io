@@ -2302,67 +2302,53 @@ input, select, textarea {
 			padding: 0;
 		}
 
-/* Image */
+		/* Image */
 
-	.image {
-		border-radius: 4px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
-
-		.image img {
-			border-radius: 4px;
-			display: block;
-		}
-
-		.image.left, .image.right {
-			max-width: 40%;
-		}
-
-			.image.left img, .image.right img {
-				width: 100%;
+			.image {
+				position: relative;
+				display: inline-block;
 			}
 
-		.image.left {
-			float: left;
-			padding: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
+				.image:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background: url("images/overlay.png");
+				}
 
-		.image.right {
-			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
+				.image img {
+					display: block;
+					width: 100%;
+				}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
-
-			.image.fit img {
-				width: 100%;
-			}
-
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
-		}
-
-			.image.main img {
-				width: 100%;
-			}
-
-			@media screen and (max-width: 736px) {
-
-				.image.main {
+				.image.featured {
+					display: block;
+					width: 100%;
 					margin: 0 0 2em 0;
 				}
 
-			}
+				.image.fit {
+					display: block;
+					width: 100%;
+				}
+
+				.image.left {
+					float: left;
+					margin: 0 2em 2em 0;
+				}
+
+				.image.centered {
+					display: block;
+					margin: 0 0 2em 0;
+				}
+
+					.image.centered img {
+						margin: 0 auto;
+						width: auto;
+					}
 
 /* Table */
 
@@ -2836,10 +2822,10 @@ input, select, textarea {
 
 				#header h1 {
 					position: absolute;
-					left: 1em;
+					left: 0.38em;
 					top: 0;
-					height: 3em;
-					line-height: 3em;
+					height: 0em;
+					line-height: 0em;
 					cursor: default;
 				}
 
@@ -2887,12 +2873,12 @@ input, select, textarea {
 							position: relative;
 							left: 0;
 							top: 0;
-							height: 2.5em;
-							line-height: 2.5em;
+							height: 0em;
+							line-height: 0em;
 						}
 
 							#header h1 a {
-								font-size: 1em;
+								font-size: 0em;
 							}
 
 						#header nav {
